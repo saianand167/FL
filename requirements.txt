@@ -1,5 +1,11 @@
-flask
-face_recognition
+# flask
+# face_recognition
+# numpy
+# pillow
+# opencv-python
+streamlit
+opencv-python-headless
 numpy
-pillow
-opencv-python
+mediapipe
+geocoder
+haversine

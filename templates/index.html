@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Attendance</title>
+</head>
+<body>
+  <h2>📸 Smart Attendance</h2>
+  <video id="video" autoplay playsinline width="300" height="200"></video><br>
+  <button onclick="captureAndSend()">Mark Attendance</button>
+
+  <p id="result">Waiting...</p>
+
+  <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+
+<script>
+  const video = document.getElementById("video");
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // 🔹 Start camera
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => { video.srcObject = stream; })
+    .catch(err => { alert("Camera access denied: " + err); });
+
+  async function captureAndSend() {
+    // Take photo
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    let imageData = canvas.toDataURL("image/png");
+
+    // Get location
+    navigator.geolocation.getCurrentPosition(async (pos) => {
+      let lat = pos.coords.latitude;
+      let lon = pos.coords.longitude;
+
+      let res = await fetch("/attendance", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ image: imageData, lat: lat, lon: lon })
+      });
+
+      let result = await res.json();
+      document.getElementById("result").innerText = result.message;
+    }, () => {
+      document.getElementById("result").innerText = "❌ Location access denied!";
+    });
+  }
+</script>
+</body>
+</html>

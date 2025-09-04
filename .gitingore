@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Config & Secrets
+*.env
+config.json
+*.sqlite3
+secret_*.json
+
+# Images, weights, big files
+*.jpg
+*.png
+*.mp4
+*.npy

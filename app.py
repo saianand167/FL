@@ -41,7 +41,7 @@ REFERENCE_ENCODING = np.array([
 # Class Location
 # -------------------------
 CLASS_LAT, CLASS_LON = 16.7953564, 80.8234189
-RADIUS = 10000000  # meters
+RADIUS = 10000001  # meters
 
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371000

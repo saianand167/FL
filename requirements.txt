@@ -3,6 +3,4 @@ opencv-python-headless
 numpy
 pillow
 scikit-learn
-cmake
-dlib
-face-recognition
+deepface

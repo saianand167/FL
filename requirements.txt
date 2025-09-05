@@ -1,12 +1,6 @@
-# Flask==2.3.2
-# numpy==1.26.4
-# opencv-python-headless==4.10.0.84
-# geocoder==1.38.1
-# haversine==2.8.1
-# gunicorn
-Flask
+Flask==2.3.2
 gunicorn
-numpy
-opencv-python-headless
-geocoder
-haversine
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+geocoder==1.38.1
+haversine==2.8.1

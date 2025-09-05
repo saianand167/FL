@@ -96,7 +96,7 @@ from haversine import haversine, Unit
 # CLASSROOM LOCATION (example)
 # -------------------------
 CLASS_LOCATION = (16.7953564, 80.8234189)  # Your classroom coordinates
-RADIUS_METERS = 10000001  # Allowed distance
+RADIUS_METERS = 10000002  # Allowed distance
 
 # Mediapipe Face Detection
 mp_face_detection = mp.solutions.face_detection

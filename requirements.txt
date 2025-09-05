@@ -1,6 +1,8 @@
 streamlit
-opencv-python
-face-recognition
+opencv-python-headless
 numpy
 pillow
 scikit-learn
+cmake
+dlib
+face-recognition

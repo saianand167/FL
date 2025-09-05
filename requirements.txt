@@ -1,11 +1,5 @@
-# flask
-# face_recognition
-# numpy
-# pillow
-# opencv-python
-streamlit
-opencv-python-headless
-numpy
-mediapipe
-geocoder
-haversine
+Flask==2.3.2
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+geocoder==1.38.1
+haversine==2.8.1
